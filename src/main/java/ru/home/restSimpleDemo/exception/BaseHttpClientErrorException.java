@@ -1,4 +1,4 @@
-package exception;
+package ru.home.restSimpleDemo.exception;
 
 import org.springframework.http.HttpStatusCode;
 

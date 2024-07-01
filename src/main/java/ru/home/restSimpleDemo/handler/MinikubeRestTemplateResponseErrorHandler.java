@@ -1,7 +1,6 @@
 package ru.home.restSimpleDemo.handler;
 
-import exception.BaseHttpClientErrorException;
-import exception.MinikubeHttpClientErrorException;
+import ru.home.restSimpleDemo.exception.MinikubeHttpClientErrorException;
 import org.springframework.http.client.ClientHttpResponse;
 import org.springframework.stereotype.Component;
 

@@ -1,6 +1,6 @@
 package ru.home.restSimpleDemo.handler;
 
-import exception.BaseHttpClientErrorException;
+import ru.home.restSimpleDemo.exception.BaseHttpClientErrorException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.client.ClientHttpResponse;
 import org.springframework.stereotype.Component;
