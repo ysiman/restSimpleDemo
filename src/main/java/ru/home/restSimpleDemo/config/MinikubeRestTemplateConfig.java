@@ -15,8 +15,8 @@ public class MinikubeRestTemplateConfig {
     @Bean
     public RestTemplate minikubeRestTemplate(MinikubeRestTemplateResponseErrorHandler errorHandler) {
         RestTemplateBuilder rtb = new RestTemplateBuilder();
-        RestTemplate restTemplate =rtb.setConnectTimeout(Duration.ofSeconds(100))
-                .setReadTimeout(Duration.ofSeconds(100))
+        RestTemplate restTemplate =rtb.setConnectTimeout(Duration.ofSeconds(5))
+                .setReadTimeout(Duration.ofSeconds(5))
                 .errorHandler(errorHandler)
                 .build();
         restTemplate.setUriTemplateHandler( new DefaultUriBuilderFactory(baseUrl));

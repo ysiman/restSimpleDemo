@@ -1,6 +1,7 @@
 package ru.home.restSimpleDemo;
 
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -63,6 +64,12 @@ public class MinikubeController {
         MinikubeRs response = minikubeIntegrationService.getInfoFromMinikube(request);
 //        log.info("minikubedemo run");
         return "Minikube response: " + response.getMessage();
+    }
+
+    @PostMapping("/postdemo")
+    public String  postdemo() {
+        System.out.println("sdsdsdsd");
+        return "sdsdsdsd";
     }
 
 }
