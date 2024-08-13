@@ -29,4 +29,18 @@ public class MinikubeIntegrationServiceImpl extends RestIntegrationService imple
     public String getIntegrationName() {
         return "Minikube";
     }
+
+    @Override
+    public String getErrFromMinikube() {
+        log.info("Отправка запроса в миникуб");
+//        String uri = UriComponentsBuilder.fromPath("http://172.24.229.189:31504/demo").toUriString();
+        return sendHttpRequest("http://172.24.229.189:31504/err", HttpMethod.GET, null, String.class);
+    }
+
+    @Override
+    public String getTimeOutFromMinikube() {
+        log.info("Отправка запроса в миникуб");
+//        String uri = UriComponentsBuilder.fromPath("http://172.24.229.189:31504/demo").toUriString();
+        return sendHttpRequest("http://172.24.229.189:31504/timout", HttpMethod.GET, null, String.class);
+    }
 }

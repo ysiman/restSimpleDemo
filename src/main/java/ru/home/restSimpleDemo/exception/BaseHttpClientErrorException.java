@@ -1,5 +1,6 @@
 package ru.home.restSimpleDemo.exception;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;
 
 public class BaseHttpClientErrorException extends RuntimeException {
@@ -35,7 +36,7 @@ public class BaseHttpClientErrorException extends RuntimeException {
         return httpStatus;
     }
 
-    public void setHttpStatus(HttpStatusCode httpStatus) {
+    public void setHttpStatus(HttpStatus httpStatus) {
         this.httpStatus = httpStatus;
     }
 

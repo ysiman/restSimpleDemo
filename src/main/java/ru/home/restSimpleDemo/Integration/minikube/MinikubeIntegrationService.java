@@ -5,4 +5,6 @@ import ru.home.restSimpleDemo.dto.MinikubeRs;
 
 public interface MinikubeIntegrationService {
     public MinikubeRs getInfoFromMinikube(MinikubeRq request);
+    public String getErrFromMinikube();
+    public String getTimeOutFromMinikube();
 }
