@@ -71,8 +71,13 @@ public class MinikubeController {
     }
 
     @GetMapping("/timeout")
-    public ResponseEntity<String> timout() throws MinikubeServiceException {
-        return new ResponseEntity<>(miniKubeService.getTimeOutFromMinikube(), HttpStatus.OK);
+    public ResponseEntity<String> timout()  {
+
+        try {
+            return new ResponseEntity<>(miniKubeService.getTimeOutFromMinikube(), HttpStatus.OK);
+        } catch (MinikubeServiceException e) {
+            return new ResponseEntity<>("Defaul rs", HttpStatus.OK);
+        }
     }
 
 }
