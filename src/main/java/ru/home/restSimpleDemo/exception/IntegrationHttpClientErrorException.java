@@ -1,5 +1,6 @@
 package ru.home.restSimpleDemo.exception;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;
 
 public class IntegrationHttpClientErrorException extends BaseHttpClientErrorException {

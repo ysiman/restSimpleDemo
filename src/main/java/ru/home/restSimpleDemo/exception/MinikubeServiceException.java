@@ -11,9 +11,9 @@ public class MinikubeServiceException extends Exception {
         super(message);
     }
 
-    public MinikubeServiceException(String message, Throwable cause, HttpStatusCode httpStatusCode){
+    public MinikubeServiceException(String message, Throwable cause, HttpStatusCode httpStatus){
         super(message,cause);
-        this.httpStatusCode = httpStatusCode;
+        this.httpStatusCode = httpStatus;
     }
 
 }

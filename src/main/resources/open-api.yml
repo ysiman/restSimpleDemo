@@ -1,0 +1,79 @@
+openapi: 3.0.3
+info:
+  title: Operation API
+  version: v1.0.0
+servers:
+  - url: http://localhost:8000/
+paths:
+  /cashier:
+    post:
+      tags:
+        - Cashier
+      summary: Получение вносителя
+      operationId: getCashier
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#components/schemas/GetCashierRq'
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                  $ref: '#/components/schemas/GetCashierRs'
+        400:
+          description: BadRequest
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        500:
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        503:
+          description: Service unavailable
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+components:
+  schemas:
+    GetCashierRq:
+      type: object
+      required:
+        - uid
+      properties:
+        uid:
+          type: string
+          description: 'uid вносителя'
+          example: 'd1234-4522e-2311'
+          maxLength: 20
+        clientEpkId:
+          type: string
+          description: 'id клиента EPK'
+          example: '12322123212'
+
+    GetCashierRs:
+      type: object
+      properties:
+        firstName:
+          type: string
+          description: 'имя вносителя'
+        lastName:
+          type: string
+          description: 'фамилия вносителя'
+
+    Error:
+      type: object
+      properties:
+        code:
+          type: number
+        message:
+          type: string
+        description:
+          type: string

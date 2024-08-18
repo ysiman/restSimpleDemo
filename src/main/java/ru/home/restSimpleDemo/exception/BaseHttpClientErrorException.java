@@ -36,7 +36,7 @@ public class BaseHttpClientErrorException extends RuntimeException {
         return httpStatus;
     }
 
-    public void setHttpStatus(HttpStatus httpStatus) {
+    public void setHttpStatus(HttpStatusCode httpStatus) {
         this.httpStatus = httpStatus;
     }
 

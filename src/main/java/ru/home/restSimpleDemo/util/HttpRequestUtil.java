@@ -3,7 +3,8 @@ package ru.home.restSimpleDemo.util;
 import lombok.extern.slf4j.Slf4j;
 import org.owasp.encoder.Encode;
 
-import jakarta.servlet.http.HttpServletRequest;
+
+import javax.servlet.http.HttpServletRequest;
 import java.util.UUID;
 
 @Slf4j

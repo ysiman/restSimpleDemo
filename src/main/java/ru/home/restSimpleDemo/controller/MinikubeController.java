@@ -1,10 +1,13 @@
-package ru.home.restSimpleDemo;
+package ru.home.restSimpleDemo.controller;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import ru.home.restSimpleDemo.Scenario.HttpResponseScenario;
 import ru.home.restSimpleDemo.Service.MiniKubeService;
+import ru.home.restSimpleDemo.dto.external.model.GetCashierRq;
+import ru.home.restSimpleDemo.dto.external.model.GetCashierRs;
 import ru.home.restSimpleDemo.exception.MinikubeServiceException;
 
 import static ru.home.restSimpleDemo.util.LoggingMDC.addRqUidToMdc;
@@ -12,6 +15,7 @@ import static ru.home.restSimpleDemo.util.LoggingMDC.addRqUidToMdc;
 @RestController
 @Slf4j
 public class MinikubeController {
+
 
 //    private static final Logger logger = LogManager.getLogger("Vehicle");
     private final MiniKubeService miniKubeService;
