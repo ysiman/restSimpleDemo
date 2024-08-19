@@ -1,10 +1,11 @@
-package ru.home.restSimpleDemo;
+package ru.home.restSimpleDemo.controller;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import ru.home.restSimpleDemo.Service.MiniKubeService;
+import ru.home.restSimpleDemo.dto.external.model.GetCashierRq;
 import ru.home.restSimpleDemo.exception.MinikubeServiceException;
 
 import static ru.home.restSimpleDemo.util.LoggingMDC.addRqUidToMdc;
@@ -59,8 +60,8 @@ public class MinikubeController {
 //        return "Minikube response: " + response.getMessage();
 //    }
 
-    @PostMapping("/postdemo")
-    public String  postdemo() {
+    @PostMapping(path ="/postdemo",  consumes = "application/json")
+    public String  postdemo(@RequestBody GetCashierRq request) {
         System.out.println("sdsdsdsd");
         return "sdsdsdsd";
     }
