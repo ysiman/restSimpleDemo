@@ -6,8 +6,6 @@ import ru.home.restSimpleDemo.Scenario.HttpResponseScenario;
 import ru.home.restSimpleDemo.dto.external.model.GetCashierRq;
 import ru.home.restSimpleDemo.dto.external.model.GetCashierRs;
 
-;
-
 @RestController
 public class CashierController {
     private final HttpResponseScenario<GetCashierRq, GetCashierRs> getCashierScenario;
